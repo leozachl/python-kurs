@@ -7,10 +7,10 @@ print ("Opened database successfully");
 
 cursor = conn.execute('SELECT max(id) FROM test')
 # print(cursor.fetchall())
-for row in cursor:
-  print(row)
+#for row in cursor:
+#  print(row)
 
-exit()
+
 
 while True:
     word = input ('Bitte gib mir nur ein Wort:')
@@ -19,6 +19,7 @@ while True:
     else:
         conn.execute('INSERT INTO test(id, data) VALUES (?,?)', (2,'test'))
 
+conn.commit()
 cursor = conn.execute('SELECT * FROM test')
 # print(cursor.fetchall())
 for row in cursor:
