@@ -1,7 +1,7 @@
 import re
 
 
-addr = "Promigasse 22/1/3, 1010 Wien, AUSTRIA"
+addr = "Promigasse 1/1/1, 1010 Wien, AUSTRIA"
 
 data = re.search (r'(.*?),\s*(\d{4})\s*(.*?)(?:,\s(.*))?$', addr)
 
